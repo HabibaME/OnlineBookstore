@@ -153,5 +153,117 @@ BODY : {
 ```
 
 ****
+## <mark style="background: #FFB86CA6;">2- Updating an existing book</mark>
+
+### Request Example :
+```
+PUT : http://localhost:8080/4
+BODY :{
+  "name": "Then She Was Gone",
+  "author": "Lisa Jewell",
+  "price": 90.0,
+  "category": "Drama",
+  "description": "Ellie Mack was the perfect daughter. She was fifteen, the youngest of three. She was beloved by her parents, friends, and teachers. She and her boyfriend made a teenaged golden couple."
+}
+```
+
+### Response Example :
+```
+{
+    "id": 4,
+    "name": "Then She Was Gone",
+    "author": "Lisa Jewell",
+    "price": 90.0,
+    "category": "Drama",
+    "description": "Ellie Mack was the perfect daughter. She was fifteen, the youngest of three. She was beloved by her parents, friends, and teachers. She and her boyfriend made a 
+    teenaged golden couple.",
+    "quantity": 1
+}
+```
+
+****
+## <mark style="background: #FFB86CA6;">3- Getting the stock level</mark>
+
+### Request Example :
+```
+GET : http://localhost:8080/stockLevel
+```
+
+### Response Example :
+```
+3
+```
+
+****
+## <mark style="background: #FFB86CA6;">2- Updating an existing book</mark>
+
+### Request Example :
+```
+GET : http://localhost:8080/availability/Then She Was Gone
+```
+
+### Response Example :
+```
+This book is available
+```
+
+****
+## <mark style="background: #FFB86CA6;">1- Updating an existing book</mark>
+
+### Request Example :
+```
+GET : http://localhost:8080/books/drama
+```
+
+### Response Example :
+```
+{
+    "id": 4,
+    "name": "Then She Was Gone",
+    "author": "Lisa Jewell",
+    "price": 90.0,
+    "category": "Drama",
+    "description": "Ellie Mack was the perfect daughter. She was fifteen, the youngest of three. She was beloved by her parents, friends, and teachers. She and her boyfriend made a 
+    teenaged golden couple.",
+    "quantity": 1
+}
+```
+
+****
+## <mark style="background: #FFB86CA6;">1- Updating an existing book</mark>
+
+### Request Example :
+```
+GET : http://localhost:8080/bookDetails/Then She Was Gone
+```
+
+### Response Example :
+```
+{
+    "id": 4,
+    "name": "Then She Was Gone",
+    "author": "Lisa Jewell",
+    "price": 90.0,
+    "category": "Drama",
+    "description": "Ellie Mack was the perfect daughter. She was fifteen, the youngest of three. She was beloved by her parents, friends, and teachers. She and her boyfriend made a 
+    teenaged golden couple.",
+    "quantity": 1
+}
+```
+
+****
+## <mark style="background: #FFB86CA6;">1- Updating an existing book</mark>
+
+### Request Example :
+```
+GET : http://localhost:8080/Mariam Mohamed/Then She Was Gone/1-2-2023/10-2-2023
+```
+
+### Response Example :
+```
+The book is borrowed to you , please return it before 10-2-2023
+```
+
+****
 
 
