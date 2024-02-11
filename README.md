@@ -26,8 +26,10 @@ The project is structured into different packages to maintain a modular and orga
 4. Actuator.
    
 5. Junit testing.
+   
+6. Validation.
  
-6. Authentication & Authorization.
+7. Authentication & Authorization.
 ## Entities
 1. User: Represents user information including authentication details
 2. Book: Represents book details.
