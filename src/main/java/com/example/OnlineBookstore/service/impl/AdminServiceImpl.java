@@ -8,6 +8,7 @@ import com.example.OnlineBookstore.error.RecordNotFoundException;
 import com.example.OnlineBookstore.mapper.Mapper;
 import com.example.OnlineBookstore.repository.BookRepository;
 import com.example.OnlineBookstore.service.AdminService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class AdminServiceImpl implements AdminService {
     private final Mapper mapper;
 
     @Override
-    public BookResponseDTO addNewBook(BookRequestDTO bookRequestDTO) {
+    public BookResponseDTO addNewBook(@Valid BookRequestDTO bookRequestDTO) {
         Book storedBook = repository.findByName(bookRequestDTO.name());
         if (storedBook != null)
             throw new DuplicationRecordException("Oops! this Question is already in your database");
@@ -28,7 +29,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public BookResponseDTO updateBookDetails(BookRequestDTO bookRequestDTO, long id) {
+    public BookResponseDTO updateBookDetails(@Valid BookRequestDTO bookRequestDTO, long id) {
         Book book = repository.findById(id).orElseThrow(
                 () -> new RecordNotFoundException("Book not found with id = " + id)
         );

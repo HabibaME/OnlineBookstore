@@ -8,6 +8,7 @@ import com.example.OnlineBookstore.enums.Role;
 import com.example.OnlineBookstore.error.RecordNotFoundException;
 import com.example.OnlineBookstore.repository.UserRepository;
 import com.example.OnlineBookstore.security.JwtService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -27,7 +28,7 @@ public class JwtAuthenticationService {
     private final AuthenticationManager authenticationManager;
     private final PasswordEncoder passwordEncoder;
 
-    public RegisterResponseDTO register(RegisterRequestDTO dto) throws RecordNotFoundException {
+    public RegisterResponseDTO register(@Valid RegisterRequestDTO dto) throws RecordNotFoundException {
         var user = User
                 .builder()
                 .userName(dto.getUserName())
@@ -51,7 +52,7 @@ public class JwtAuthenticationService {
         }
     }
 
-    public LoginResponseDTO login(LoginRequestDTO dto) throws RecordNotFoundException {
+    public LoginResponseDTO login(@Valid LoginRequestDTO dto) throws RecordNotFoundException {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
