@@ -57,6 +57,12 @@ The project is structured into different packages to maintain a modular and orga
 - /bookDetails/{name}: GET endpoint provides the user with book details by the book name.
 - /{userName}/{bookName}/{borrowingDate}/{returnDate}: GET endpoint enables the user for borrowing specific book.
 - /actuator/health: GET endpoint calculating the total memory and the free memory.
+## Swagger.
+I have been using Swagger to document API in Spring project and it worked pretty well.
+### How to run
+```
+http://localhost:8080/swagger-ui/index.html#/
+```
 ## How to Run
 1. Clone the repository.
 2. Configure the database connection in the application.properties file.
