@@ -59,7 +59,6 @@ The project is structured into different packages to maintain a modular and orga
 - /actuator/health: GET endpoint calculating the total memory and the free memory.
 ## Swagger.
 I have been using Swagger to document API in Spring project and it worked pretty well.
-### How to run
 ```
 http://localhost:8080/swagger-ui/index.html#/
 ```
