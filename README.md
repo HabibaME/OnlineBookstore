@@ -17,13 +17,17 @@ The project is structured into different packages to maintain a modular and orga
 - com.example.project.config: Contains configration classes.
 ## Tools & Technologies💡
 
-1.Programming Language: Java 17.
-2-Backend Framework: Spring Boot v3.2.2.
-3-Logger: SLF4J.
-4-Actuator.
-5-Junit testing.
-6-Login & Registration.
-7-Authentication & Authorization.
+1. Programming Language: Java 17.
+
+2. Backend Framework: Spring Boot v3.2.2.
+ 
+3. Logger: SLF4J.
+   
+4. Actuator.
+   
+5. Junit testing.
+ 
+6. Authentication & Authorization.
 ## Entities
 1. User: Represents user information including authentication details
 2. Book: Represents book details.
